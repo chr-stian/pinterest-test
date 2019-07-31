@@ -20,10 +20,10 @@ public class DemoTest {
     @Test
     public void getBoardURLTest(){
         String response = given().auth().oauth2(accessToken)
-                .when().get("/boards/ohpen/we-are-ohpen/").asString();
+                .when().get("/boards/XXXX/we-are-XXXX/").asString();
 
         String actualBoardURL = from(response).get("data.url");
-        String expectedBoardURL  = "https://www.pinterest.com/ohpen/we-are-ohpen/";
+        String expectedBoardURL  = "https://www.pinterest.com/XXXX/we-are-XXXX/";
         Assert.assertEquals(expectedBoardURL,actualBoardURL);
     }
 
@@ -31,7 +31,7 @@ public class DemoTest {
     public void getBoardIDTest(){
 
         String response = given().auth().oauth2(accessToken)
-                .when().get("/boards/ohpen/we-are-ohpen/").asString();
+                .when().get("/boards/XXXX/we-are-XXXX/").asString();
 
         String actualBoardID = from(response).get("data.id");
         String expectedBoardID  = "402579722879371092";
